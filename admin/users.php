@@ -148,6 +148,7 @@ $data = mysqli_query($db, $users_sql);
                   ?>
                   <h2 class="text-xl mb-8">Give Permissions :</h2>
                   <form method="post">
+                      <input type="hidden" name="ticket_id" value="<?php echo $user['id']; ?>">
                       <input name="admin" type="submit" value="Admin" class="btnn">
                       <input name="worker" type="submit" value="Worker" class="btnn">
                       <input name="customer" type="submit" value="Customer" class="btnn">
