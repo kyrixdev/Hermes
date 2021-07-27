@@ -136,7 +136,6 @@ $data = mysqli_query($db, $users_sql);
                 ?>
               </td>
               <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-200">
-              <?php $idd = $user['id'];?>
               <div class="modal-container">
               <input id="modal-toggle" type="checkbox">
               <label class="btnn" for="modal-toggle">Click me</label> 
