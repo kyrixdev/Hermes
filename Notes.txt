@@ -1,0 +1,56 @@
+1- Website Template : 
+    will be cloned from ("https://ftid.io/") which is (" https://themeforest.net/item/skote-html-laravel-admin-dashboard-template/25548061 ")
+    Will create simple landing page with clean UI and easy to browse for use ;
+
+2- Telegram Bot : 
+    Found how to make the login , you need to create a bot , the bot will return you some data 
+        (id, first_name, last_name, username, photo_url, auth_date and hash)
+    all this data will be stored in a dB for user informations 
+    Sources : https://core.telegram.org/widgets/login  
+              https://gist.github.com/anonymous/6516521b1fb3b464534fbc30ea3573c2
+    Bot Token: 1826718180:AAEOVLWsiKsQ1XBd5DZm4PotVgpWLZ7iJrI
+    Testing : Successfully worked 
+
+3- I need details about order page , all details . 
+
+4- Ticket System : 
+    will be using ("https://codeshack.io/ticketing-system-php-mysql/")
+    needs some changes 
+    Testing: ...
+
+5- Deposit system : 
+    still checking on it . 
+
+
+
+
+/*      */
+
+
+3. Tickets/Shop 
+ -submit order (FTID 1: $20 FTID 3: $30 FTID 5:$50 (guaranteed and express label)) 
+    - select courier  (ups, usps, fedex, pitney bowes)
+    - enter weight (lbs)
+    - enter tracking number (only numbers)
+    - upload pdf 
+ - show orders 
+    - search bar (track by tracking ID)
+    - status bar of all orders in chronological order with info (Courier, weight, price, tracking #, status (api ups, fedex, usps)
+
+
+
+COINBASE : 
+ Seed phase : order innocent arrange idea pig main forum cotton pulp dad piano skin
+
+
+/* Admin side */ 
+Roles : 0 = "Owner" , 1 = "Admin", 2 = "Worker", 3 = "customer"
+    0: make any person an admin or worker, or remove the role of admin/worker
+    1: make any person a worker, or remove the role of worker (+ be able to accept  tickets and mark as complete)
+    2: be able to accept tickets and mark as complete 
+    3: can see just the customer portion of the pages
+
+(owner, admin, workers)
+ - a pending tickets, worked on, finished 
+ - owner/admins delete tickets 
+ - workers can only accept 
