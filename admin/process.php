@@ -67,4 +67,26 @@ if(isset($_POST['finished'])){
     or die(mysqli_error($db));
     header("Location: tickets.php");
 }
+
+if(isset($_POST['admin'])){ 
+    $user_idd = $_POST['user_idd'];
+    $accept = "UPDATE `users` SET `role`= '1' WHERE `id` = '$user_idd' ";
+    mysqli_query($db,$accept)
+    or die(mysqli_error($db));
+    header("Location: users.php");
+  }
+  if(isset($_POST['worker'])){ 
+    $user_idd = $_POST['user_idd'];
+    $accept = "UPDATE `users` SET `role`= '2' WHERE `id` = '$user_idd' ";
+    mysqli_query($db,$accept)
+    or die(mysqli_error($db));
+    header("Location: users.php");
+  }
+  if(isset($_POST['customer'])){ 
+    $user_idd = $_POST['user_idd'];
+    $accept = "UPDATE `users` SET `role`= '3' WHERE `id` = '$user_idd' ";
+    mysqli_query($db,$accept)
+    or die(mysqli_error($db));
+    header("Location: users.php");
+  }
 ?>
