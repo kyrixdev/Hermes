@@ -41,11 +41,21 @@ if ($_GET['logout']) {
   setcookie('tg_user', '');
   header('Location: home.php');
 }
-$order_sql = "SELECT * FROM `orders`";
+$order_sql = "SELECT * FROM `orders` ORDER BY `orders`.`status` DESC";
 $data = mysqli_query($db, $order_sql);
 
 
+$peding_orders = "SELECT COUNT(*) as orders FROM `orders` WHERE `status` = 'Processing'";
+$peding_orders_sql = mysqli_query($db, $peding_orders);
+$pending = mysqli_fetch_assoc($peding_orders_sql);
 
+$declined_orders = "SELECT COUNT(*) as orders FROM `orders` WHERE `status` = 'Declined'";
+$declined_orders_sql = mysqli_query($db, $declined_orders);
+$declined = mysqli_fetch_assoc($declined_orders_sql);
+
+$accepted_orders = "SELECT COUNT(*) as orders FROM `orders` WHERE `status` = 'Accepted'";
+$accepted_orders_sql = mysqli_query($db, $accepted_orders);
+$accepted = mysqli_fetch_assoc($accepted_orders_sql);
 // Refresh Page 
 $url1=$_SERVER['REQUEST_URI'];
 header("Refresh: 5; URL=$url1");
@@ -59,10 +69,49 @@ header("Refresh: 5; URL=$url1");
     </div>
     <div class="orders mx-8">
 	
-    <div class="searchbar rounded flex items-center w-full p-3 shadow-sm">
-       <button class="mr-4 outline-none focus:outline-none"><svg class=" w-5 text-gray-600 h-5 cursor-pointer" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke="currentColor" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button>
-       <input type="search" name="search-order" id="search-order" onkeyup="search_orders()" placeholder="Search for orders" x-model="q" class="rounded-md w-full pl-4 text-sm outline-none focus:outline-none bg-transparent">
-    </div>
+    <div class="cards"">
+            <div class="Orders rounded-xl">
+                <div class="col-span-12 sm:col-span-6 md:col-span-3 rounded-xl ">
+                    <div class="flex flex-row bg-white shadow-sm rounded-xl p-4">
+                    <div class="flex items-center justify-center flex-shrink-0 h-12 w-12 rounded-xl bg-gray-600">
+                    <i class='bx bx-time-five' style="color: #edd184;"></i>
+                    </div>
+                    <div class="flex flex-col flex-grow ml-4">
+                        <div class="text-sm font-medium	text-black">Processing Orders</div>
+                        <div class="font-bold text-black text-lg"><?php echo $pending['orders']; ?></div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="Orders rounded-xl mx-8">
+                <div class="col-span-12 sm:col-span-6 md:col-span-3 rounded-xl ">
+                    <div class="flex flex-row bg-white shadow-sm rounded-xl p-4">
+                    <div class="flex items-center justify-center flex-shrink-0 h-12 w-12 rounded-xl bg-gray-600">
+                    <i class='bx bx-check' style="color: #edd184;"></i>
+                    </div>
+                    <div class="flex flex-col flex-grow ml-4">
+                        <div class="text-sm font-medium	text-black">Accepted Orders</div>
+                        <div class="font-bold text-black text-lg"><?php echo $accepted['orders']; ?></div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="balance">
+                <div class="col-span-12 sm:col-span-6 md:col-span-3 rounded-xl ">
+                    <div class="flex flex-row bg-white shadow-sm rounded-xl p-4">
+                    <div class="flex items-center justify-center flex-shrink-0 h-12 w-12 rounded-xl bg-gray-600">
+                      
+                      <i class='bx bx-x' style="color: #edd184;"></i>
+                    </div>
+                    <div class="flex flex-col flex-grow ml-4">
+                        <div class="text-sm font-medium text-black">Declined Orders</div>
+                        <div class="font-bold text-black text-lg"><?php echo $declined['orders']; ?></div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
 
 <!-- This example requires Tailwind CSS v2.0+ -->
 <div class="flex flex-col">

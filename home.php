@@ -1,7 +1,7 @@
 <?php
 session_start();
 include_once 'dbConfig.php';
-define('BOT_USERNAME', 'loginphp_bot'); // place username of your bot here
+define('BOT_USERNAME', 'loginphp_bot'); 
 function getTelegramUserData() {
   if (isset($_COOKIE['tg_user'])) {
     $auth_data_json = urldecode($_COOKIE['tg_user']);
@@ -180,7 +180,6 @@ h1 {
 	</defs>
 </svg>
 <div class="content">
-    <h1>LOG IN BELOW</h1>
     
   </div>
 <script async src="https://telegram.org/js/telegram-widget.js?2" data-telegram-login="loginphp_bot" data-size="large" data-auth-url="check_authorization.php"></script>
@@ -201,13 +200,13 @@ const elts = {
 
 // The strings to morph between. You can change these to anything you want!
 const texts = [
-	"HERMES",
-	"FTID"
+	"HERMES FTID",
+
 ];
 
 // Controls the speed of morphing.
 const morphTime = 1;
-const cooldownTime = 1;
+const cooldownTime = 100;
 
 let textIndex = texts.length - 1;
 let time = new Date();

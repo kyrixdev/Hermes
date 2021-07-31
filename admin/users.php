@@ -40,7 +40,7 @@ if ($_GET['logout']) {
   setcookie('tg_user', '');
   header('Location: home.php');
 }
-$users_sql = "SELECT * FROM `users`";
+$users_sql = "SELECT * FROM `users` ORDER BY `users`.`id` DESC";
 $data = mysqli_query($db, $users_sql);
 ?>
 <div class="middle">
@@ -145,19 +145,16 @@ $data = mysqli_query($db, $users_sql);
                   <?php
                   if($role === "Owner"){
                   ?>
-                  <h2 class="text-xl mb-8">Give Permissions :</h2>
-                  <form method="post">
-                      <input type="hidden" name="ticket_id" value="<?php echo $user['id']; ?>">
-                      <input name="admin" type="submit" value="Admin" class="btnn">
-                      <input name="worker" type="submit" value="Worker" class="btnn">
-                      <input name="customer" type="submit" value="Customer" class="btnn">
-                      <br>
+                  <form method="post" >
                       <h2 class="text-xl my-8">Block IP (Be carful):</h2>
                       <button class="btnn" value="block ip" name="block" type="submit">Block IP</button>
                   </form>
                   
                   <label class="modal-content-btn" for="modal-toggle">OK</label>
-                  <?php } ?>   
+                  <?php 
+                
+
+                } ?>   
                 </div>        
               </div>  
               </td> 
@@ -169,6 +166,21 @@ $data = mysqli_query($db, $users_sql);
           </tbody>
         </table>
       </div>
+
+      <?php
+                  if($role === "Owner"){
+                  ?>
+                  <h2 class="text-xl mb-8 mt-8">Give Permissions :</h2>
+                  <form method="post" action="process.php">
+                      <input type="text" name="user_idd" placeholder="Put user id">
+                      <input name="admin" type="submit" value="Admin" class="btnn">
+                      <input name="worker" type="submit" value="Worker" class="btnn">
+                      <input name="customer" type="submit" value="Customer" class="btnn">
+                      <br>
+                  </form>
+
+        <?php } ?>
+
     </div>
   </div>
 </div>
@@ -206,22 +218,4 @@ $data = mysqli_query($db, $users_sql);
 <?php
 include_once 'footer.php';
 
-if(isset($_POST['admin'])){ 
-  $accept = "UPDATE `users` SET `role`= '1' WHERE `id` = '$idd' ";
-  mysqli_query($db,$accept)
-  or die(mysqli_error($db));
-  header("Location: users.php");
-}
-if(isset($_POST['worker'])){ 
-  $accept = "UPDATE `users` SET `role`= '2' WHERE `id` = '$idd' ";
-  mysqli_query($db,$accept)
-  or die(mysqli_error($db));
-  header("Location: orders.php");
-}
-if(isset($_POST['customer'])){ 
-  $accept = "UPDATE `users` SET `role`= '3' WHERE `id` = '$idd' ";
-  mysqli_query($db,$accept)
-  or die(mysqli_error($db));
-  header("Location: orders.php");
-}
 ?>

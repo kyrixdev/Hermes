@@ -57,7 +57,7 @@ $count = mysqli_fetch_assoc($orders_num_sql);
     </div>
 
     <div class="main">
-        <div class="cards">
+        <div class="cards"">
             <div class="Orders rounded-xl">
                 <div class="col-span-12 sm:col-span-6 md:col-span-3 rounded-xl ">
                     <div class="flex flex-row bg-white shadow-sm rounded-xl p-4">
@@ -72,7 +72,7 @@ $count = mysqli_fetch_assoc($orders_num_sql);
                 </div>
             </div>
 
-            <div class="balance">
+            <div class="balance"  style="margin: 0 0 0 4rem;">
                 <div class="col-span-12 sm:col-span-6 md:col-span-3 rounded-xl ">
                     <div class="flex flex-row bg-white shadow-sm rounded-xl p-4">
                     <div class="flex items-center justify-center flex-shrink-0 h-12 w-12 rounded-xl bg-gray-600">
