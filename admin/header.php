@@ -40,6 +40,7 @@
 <body>
 <div class="left">
     <div class="logo">
+<<<<<<< HEAD
         <img src="https://cdn.discordapp.com/attachments/884816091803680858/903054839389487104/unknown.png" width="300" class="mx-auto">
     </div>
     <nav class="item-list">
@@ -52,6 +53,20 @@
         <small> Support</small>
         <a href="https://t.me/ftidart" target="_blank" class="item-link"><i class='bx bxl-telegram'></i></i>Community Chat</a>
         <a href="tickets.php" class="item-link"><i class='bx bx-support'></i></i>Tickets Area</a>
+=======
+        <img src="../images/logo.png" width="100" class="mx-auto">
+    </div>
+    <nav class="item-list">
+        <small> My Account</small>
+        <a href="index.php" class="item-link"><i class='bx bx-home-smile' style='color:#edd184'></i>Dashboard</a>
+        <a href="orders.php" class="item-link"><i class='bx bx-list-ol' style='color:#edd184' ></i>Show orders</a>
+        <a href="users.php" class="item-link"><i class='bx bx-user-circle' style='color:#edd184' ></i>Users List</a>
+    </nav>
+    <nav class="item-list">
+        <small> Support</small>
+        <a href="https://t.me/hermesftid" target="_blank" class="item-link"><i class='bx bxl-telegram' style='color:#edd184'></i></i>Community Chat</a>
+        <a href="tickets.php" class="item-link"><i class='bx bx-support' style='color:#edd184'></i></i>Tickets Area</a>
+>>>>>>> e665a55d2383eeccd2f52b18f956be931cba63ee
     </nav>
     
 </div>

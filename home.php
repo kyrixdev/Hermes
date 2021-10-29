@@ -40,7 +40,11 @@ function getUserIP()
 $user_ip = getUserIP();
 if ($_GET['logout']) {
   setcookie('tg_user', '');
+<<<<<<< HEAD
   header('Location: index.php');
+=======
+  header('Location: login_example.php');
+>>>>>>> e665a55d2383eeccd2f52b18f956be931cba63ee
 }
 
 $tg_user = getTelegramUserData();
@@ -94,6 +98,7 @@ if ($tg_user !== false) {
         
         body {
             margin: 0px;
+<<<<<<< HEAD
             background: #000000;
             color: #fff;
         }
@@ -102,12 +107,72 @@ if ($tg_user !== false) {
 ;
     display: block;
     margin: 0 auto;
+=======
+            background: #101010;
+            color: #fff;
+        }
+        
+        #container {
+            /* Center the text in the viewport. */
+            position: absolute;
+            width: 100vw;
+            height: 80pt;
+            top: 0;
+            bottom: 0;
+            
+            /* This filter is a lot of the magic, try commenting it out to see how the morphing works! */
+            filter: url(#threshold) blur(0.6px);
+        }
+        
+        /* Your average text styling */
+        #text1, #text2 {
+            position: absolute;
+            width: 100%;
+            display: inline-block;
+            
+            font-family: 'Raleway', sans-serif;
+            font-size: 80pt;
+            
+            text-align: center;
+            
+            user-select: none;
+>>>>>>> e665a55d2383eeccd2f52b18f956be931cba63ee
         }
         #telegram-login-loginphp_bot{
           display: block;
           margin: 0 auto;
         }
+<<<<<<< HEAD
 
+=======
+        #text1, #text2 {
+	font-family: 'Playfair Display', serif;
+	text-transform: uppercase;	
+	margin: 0;
+  background: linear-gradient(to bottom, #cfc09f 22%,#634f2c 24%, #cfc09f 26%, #cfc09f 27%,#ffecb3 40%,#3a2c0f 78%); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.content {
+    margin: 0 auto;
+    padding: 1.5em;
+    position: relative;
+}
+h1 {
+    text-align: center;
+    margin: 0 auto 1em;
+    padding: 0 1em;
+    max-width: 42rem;
+    line-height: 1.2;
+    transform: skewY(-11deg);
+    font-size: 3em;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-family: 'Raleway', sans-serif;
+    text-shadow: -4px -4px 0px #d8a316;
+}
+>>>>>>> e665a55d2383eeccd2f52b18f956be931cba63ee
         </style>
 </head>
 <body>
@@ -115,11 +180,37 @@ if ($tg_user !== false) {
 
 <!-- The two texts -->
 <div id="container">
+<<<<<<< HEAD
   <img src="https://cdn.discordapp.com/attachments/884816091803680858/903043808156069898/Website.gif">
 <script async src="https://telegram.org/js/telegram-widget.js?2" data-telegram-login="loginphp_bot" data-size="large" data-auth-url="check_authorization.php"></script>
 
 </div>
 
+=======
+	<span id="text1"></span>
+	<span id="text2"></span>
+</div>
+
+<!-- The SVG filter used to create the merging effect -->
+<svg id="filters">
+	<defs>
+		<filter id="threshold">
+			<!-- Basically just a threshold effect - pixels with a high enough opacity are set to full opacity, and all other pixels are set to completely transparent. -->
+			<feColorMatrix in="SourceGraphic"
+					type="matrix"
+					values="1 0 0 0 0
+									0 1 0 0 0
+									0 0 1 0 0
+									0 0 0 255 -140" />
+		</filter>
+	</defs>
+</svg>
+<div class="content">
+    
+  </div>
+<script async src="https://telegram.org/js/telegram-widget.js?2" data-telegram-login="loginphp_bot" data-size="large" data-auth-url="check_authorization.php"></script>
+
+>>>>>>> e665a55d2383eeccd2f52b18f956be931cba63ee
 <!-- Load Babel -->
 <!-- v6 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> -->
 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -136,7 +227,11 @@ const elts = {
 
 // The strings to morph between. You can change these to anything you want!
 const texts = [
+<<<<<<< HEAD
 	"FTID.ART",
+=======
+	"HERMES FTID",
+>>>>>>> e665a55d2383eeccd2f52b18f956be931cba63ee
 
 ];
 

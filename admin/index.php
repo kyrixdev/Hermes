@@ -68,12 +68,21 @@ $users_num = mysqli_fetch_assoc($users);
             <div class="Orders rounded-xl">
                 <div class="col-span-12 sm:col-span-6 md:col-span-3 rounded-xl ">
                     <div class="flex flex-row bg-white shadow-sm rounded-xl p-4">
+<<<<<<< HEAD
                     <div class="flex items-center justify-center flex-shrink-0 h-12 w-12 rounded-xl bg-gray-300">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
                     </div>
                     <div class="flex flex-col flex-grow ml-4">
                         <div class="text-sm font-medium	text-white">Orders</div>
                         <div class="font-bold text-white text-lg"><?php echo $count['orders']; ?></div>
+=======
+                    <div class="flex items-center justify-center flex-shrink-0 h-12 w-12 rounded-xl bg-gray-600">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+                    </div>
+                    <div class="flex flex-col flex-grow ml-4">
+                        <div class="text-sm font-medium	text-black">Orders</div>
+                        <div class="font-bold text-black text-lg"><?php echo $count['orders']; ?></div>
+>>>>>>> e665a55d2383eeccd2f52b18f956be931cba63ee
                     </div>
                     </div>
                 </div>
@@ -82,12 +91,21 @@ $users_num = mysqli_fetch_assoc($users);
             <div class="balance" style="margin: 0 0 0 4rem;">
                 <div class="col-span-12 sm:col-span-6 md:col-span-3 rounded-xl ">
                     <div class="flex flex-row bg-white shadow-sm rounded-xl p-4">
+<<<<<<< HEAD
                     <div class="flex items-center justify-center flex-shrink-0 h-12 w-12 rounded-xl bg-gray-300">
                         <i class="bx bx-user-circle text-2xl" style="color: #7d23b7;" ></i>
                     </div>
                     <div class="flex flex-col flex-grow ml-4">
                         <div class="text-sm font-medium text-white">Total Users</div>
                         <div class="font-bold text-white text-lg"><?php echo $users_num["users"]; ?></div>
+=======
+                    <div class="flex items-center justify-center flex-shrink-0 h-12 w-12 rounded-xl bg-gray-600">
+                        <i class="bx bx-user-circle text-2xl" style="color: #edd184;" ></i>
+                    </div>
+                    <div class="flex flex-col flex-grow ml-4">
+                        <div class="text-sm font-medium text-black">Total Users</div>
+                        <div class="font-bold text-black text-lg"><?php echo $users_num["users"]; ?></div>
+>>>>>>> e665a55d2383eeccd2f52b18f956be931cba63ee
                     </div>
                     </div>
                 </div>
@@ -139,7 +157,11 @@ $users_num = mysqli_fetch_assoc($users);
                                 <?php } } ?>   
                             </ul>
             </div>
+<<<<<<< HEAD
            <!-- <div class="card shadow-sm rounded-xl mb-4">
+=======
+            <div class="card shadow-sm rounded-xl mb-4">
+>>>>>>> e665a55d2383eeccd2f52b18f956be931cba63ee
                             <div class="card-title d-flex justify-content-between align-items-center p-3 mb-0">
                                 <div class="mb-0">Your Deposits</div>
                                 <a href="deposit.php" class="text-muted small">View All</a>
@@ -169,7 +191,11 @@ $users_num = mysqli_fetch_assoc($users);
                                 </li>
 
                             </ul>
+<<<<<<< HEAD
             </div> -->
+=======
+            </div>
+>>>>>>> e665a55d2383eeccd2f52b18f956be931cba63ee
         </div>
         
     </div>
