@@ -55,7 +55,10 @@ if($_GET["order"]){
       $courier = $row['courier'];
       $weight = $row['weight'];
       $price = $row['price'];
+<<<<<<< HEAD
+=======
       $track = $row['track'];
+>>>>>>> e665a55d2383eeccd2f52b18f956be931cba63ee
       $status = $row['status'];
       $file = $row['file'];
       $added = $row['added'];
@@ -109,6 +112,13 @@ if($_GET["order"]){
         </li>
       </ul>
       <ul class="text-lg text-gray-300 font-light hidden md:flex mt-8">
+<<<<<<< HEAD
+        <li class="font-bold mr-5">
+            PRICE
+            <span class="block text-base font-normal"><?php echo $price; ?></span>
+        </li>
+        <br>
+=======
         <li class="font-bold">
             PRICE
             <span class="block text-base font-normal"><?php echo $price; ?></span>
@@ -117,6 +127,7 @@ if($_GET["order"]){
             TRACK
             <span class="block text-base font-normal"><?php echo $track; ?></span>
         </li>
+>>>>>>> e665a55d2383eeccd2f52b18f956be931cba63ee
         <li class="font-bold">
             STATUS
             <span class="block text-base font-normal"><?php echo $status; ?></span>

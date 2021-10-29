@@ -37,6 +37,21 @@
 <body>
 <div class="left">
     <div class="logo">
+<<<<<<< HEAD
+        <img src="https://cdn.discordapp.com/attachments/884816091803680858/903054839389487104/unknown.png" width="300" class="mx-auto">
+    </div>
+    <nav class="item-list">
+        <small> My Account</small>
+        <a href="index.php" class="item-link"><i class='bx bx-home-smile'></i>Dashboard</a>
+        <a href="deposit.php" class="item-link"><i class='bx bx-money'></i>Deposit</a>
+        <a href="boxing.php" class="item-link"><i class='bx bxs-spreadsheet'></i>Submit Order</a>
+        <a href="orders.php" class="item-link"><i class='bx bx-list-ol'></i>Show orders</a>
+    </nav>
+    <nav class="item-list">
+        <small> Support</small>
+        <a href="https://t.me/ftidart" target="_blank" class="item-link"><i class='bx bxl-telegram'></i></i>Community Chat</a>
+        <a href="tickets/index.php" class="item-link"><i class='bx bx-support' ></i></i>Customer Support</a>
+=======
         <img src="images/logo.png" width="100" class="mx-auto">
     </div>
     <nav class="item-list">
@@ -50,6 +65,7 @@
         <small> Support</small>
         <a href="https://t.me/hermesftid" target="_blank" class="item-link"><i class='bx bxl-telegram' style='color:#edd184'></i></i>Community Chat</a>
         <a href="tickets/index.php" class="item-link"><i class='bx bx-support' style='color:#edd184'></i></i>Customer Support</a>
+>>>>>>> e665a55d2383eeccd2f52b18f956be931cba63ee
     </nav>
     
 </div>

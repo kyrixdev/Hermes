@@ -29,7 +29,11 @@ if($row = $login->fetch_assoc()){
     }
 }
 else{
+<<<<<<< HEAD
+  header('Location: home.php');
+=======
     header('Location: home.php');
+>>>>>>> e665a55d2383eeccd2f52b18f956be931cba63ee
 }
 if ($_GET['logout']) {
   setcookie('tg_user', '');
@@ -61,12 +65,21 @@ $count = mysqli_fetch_assoc($orders_num_sql);
             <div class="Orders rounded-xl">
                 <div class="col-span-12 sm:col-span-6 md:col-span-3 rounded-xl ">
                     <div class="flex flex-row bg-white shadow-sm rounded-xl p-4">
+<<<<<<< HEAD
+                    <div class="flex items-center justify-center flex-shrink-0 h-12 w-12 rounded-xl bg-gray-300">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+                    </div>
+                    <div class="flex flex-col flex-grow ml-4">
+                        <div class="text-sm font-medium	text-white">Orders</div>
+                        <div class="font-bold text-white text-lg"><?php echo $count['orders']; ?></div>
+=======
                     <div class="flex items-center justify-center flex-shrink-0 h-12 w-12 rounded-xl bg-gray-600">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
                     </div>
                     <div class="flex flex-col flex-grow ml-4">
                         <div class="text-sm font-medium	text-black">Orders</div>
                         <div class="font-bold text-black text-lg"><?php echo $count['orders']; ?></div>
+>>>>>>> e665a55d2383eeccd2f52b18f956be931cba63ee
                     </div>
                     </div>
                 </div>
@@ -75,12 +88,21 @@ $count = mysqli_fetch_assoc($orders_num_sql);
             <div class="balance"  style="margin: 0 0 0 4rem;">
                 <div class="col-span-12 sm:col-span-6 md:col-span-3 rounded-xl ">
                     <div class="flex flex-row bg-white shadow-sm rounded-xl p-4">
+<<<<<<< HEAD
+                    <div class="flex items-center justify-center flex-shrink-0 h-12 w-12 rounded-xl bg-gray-300">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <div class="flex flex-col flex-grow ml-4">
+                        <div class="text-sm font-medium text-white">Balance</div>
+                        <div class="font-bold text-white text-lg">0.00</div>
+=======
                     <div class="flex items-center justify-center flex-shrink-0 h-12 w-12 rounded-xl bg-gray-600">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                     </div>
                     <div class="flex flex-col flex-grow ml-4">
                         <div class="text-sm font-medium text-black">Balance</div>
                         <div class="font-bold text-black text-lg">0.00</div>
+>>>>>>> e665a55d2383eeccd2f52b18f956be931cba63ee
                     </div>
                     </div>
                 </div>
@@ -168,7 +190,11 @@ $count = mysqli_fetch_assoc($orders_num_sql);
         </div>
         <div class="name text-center">
             <h3 class="text-xl"><?php echo $first_name ,' ', $last_name; ?></h3>
+<<<<<<< HEAD
+            <h3 class="text-lg text-purple-600"><?php echo $role; ?></h3>
+=======
             <h3 class="text-lg text-gray-600"><?php echo $role; ?></h3>
+>>>>>>> e665a55d2383eeccd2f52b18f956be931cba63ee
         </div>
         <nav class="info">
             <li><i class='bx bxs-id-card'></i> ID: <span> <?php echo $id ?> </span> </li>

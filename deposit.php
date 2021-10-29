@@ -106,7 +106,11 @@ if ($_GET['logout']) {
               </th>
             </tr>
           </thead>
+<<<<<<< HEAD
+          <tbody class="divide-y divide-gray-200">
+=======
           <tbody class="bg-white divide-y divide-gray-200">
+>>>>>>> e665a55d2383eeccd2f52b18f956be931cba63ee
             <tr class="tr-dp">
               <td class="px-6 py-4 whitespace-nowrap">
                   <div class="ml-4">

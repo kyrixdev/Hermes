@@ -58,7 +58,11 @@ $accepted_orders_sql = mysqli_query($db, $accepted_orders);
 $accepted = mysqli_fetch_assoc($accepted_orders_sql);
 // Refresh Page 
 $url1=$_SERVER['REQUEST_URI'];
+<<<<<<< HEAD
+//header("Refresh: 10; URL=$url1");
+=======
 header("Refresh: 5; URL=$url1");
+>>>>>>> e665a55d2383eeccd2f52b18f956be931cba63ee
 ?>
 <div class="middle">
     <div class="heading">
@@ -73,12 +77,21 @@ header("Refresh: 5; URL=$url1");
             <div class="Orders rounded-xl">
                 <div class="col-span-12 sm:col-span-6 md:col-span-3 rounded-xl ">
                     <div class="flex flex-row bg-white shadow-sm rounded-xl p-4">
+<<<<<<< HEAD
+                    <div class="flex items-center justify-center flex-shrink-0 h-12 w-12 rounded-xl bg-gray-300">
+                    <i class='bx bx-time-five' style="color: #7d23b7;"></i>
+                    </div>
+                    <div class="flex flex-col flex-grow ml-4">
+                        <div class="text-sm font-medium	text-white">Processing Orders</div>
+                        <div class="font-bold text-white text-lg"><?php echo $pending['orders']; ?></div>
+=======
                     <div class="flex items-center justify-center flex-shrink-0 h-12 w-12 rounded-xl bg-gray-600">
                     <i class='bx bx-time-five' style="color: #edd184;"></i>
                     </div>
                     <div class="flex flex-col flex-grow ml-4">
                         <div class="text-sm font-medium	text-black">Processing Orders</div>
                         <div class="font-bold text-black text-lg"><?php echo $pending['orders']; ?></div>
+>>>>>>> e665a55d2383eeccd2f52b18f956be931cba63ee
                     </div>
                     </div>
                 </div>
@@ -86,12 +99,21 @@ header("Refresh: 5; URL=$url1");
             <div class="Orders rounded-xl mx-8">
                 <div class="col-span-12 sm:col-span-6 md:col-span-3 rounded-xl ">
                     <div class="flex flex-row bg-white shadow-sm rounded-xl p-4">
+<<<<<<< HEAD
+                    <div class="flex items-center justify-center flex-shrink-0 h-12 w-12 rounded-xl bg-gray-300">
+                    <i class='bx bx-check' style="color: #7d23b7;"></i>
+                    </div>
+                    <div class="flex flex-col flex-grow ml-4">
+                        <div class="text-sm font-medium	text-white">Accepted Orders</div>
+                        <div class="font-bold text-white text-lg"><?php echo $accepted['orders']; ?></div>
+=======
                     <div class="flex items-center justify-center flex-shrink-0 h-12 w-12 rounded-xl bg-gray-600">
                     <i class='bx bx-check' style="color: #edd184;"></i>
                     </div>
                     <div class="flex flex-col flex-grow ml-4">
                         <div class="text-sm font-medium	text-black">Accepted Orders</div>
                         <div class="font-bold text-black text-lg"><?php echo $accepted['orders']; ?></div>
+>>>>>>> e665a55d2383eeccd2f52b18f956be931cba63ee
                     </div>
                     </div>
                 </div>
@@ -99,6 +121,15 @@ header("Refresh: 5; URL=$url1");
             <div class="balance">
                 <div class="col-span-12 sm:col-span-6 md:col-span-3 rounded-xl ">
                     <div class="flex flex-row bg-white shadow-sm rounded-xl p-4">
+<<<<<<< HEAD
+                    <div class="flex items-center justify-center flex-shrink-0 h-12 w-12 rounded-xl bg-gray-300">
+                      
+                      <i class='bx bx-x' style="color: #7d23b7;"></i>
+                    </div>
+                    <div class="flex flex-col flex-grow ml-4">
+                        <div class="text-sm font-medium text-white">Declined Orders</div>
+                        <div class="font-bold text-white text-lg"><?php echo $declined['orders']; ?></div>
+=======
                     <div class="flex items-center justify-center flex-shrink-0 h-12 w-12 rounded-xl bg-gray-600">
                       
                       <i class='bx bx-x' style="color: #edd184;"></i>
@@ -106,6 +137,7 @@ header("Refresh: 5; URL=$url1");
                     <div class="flex flex-col flex-grow ml-4">
                         <div class="text-sm font-medium text-black">Declined Orders</div>
                         <div class="font-bold text-black text-lg"><?php echo $declined['orders']; ?></div>
+>>>>>>> e665a55d2383eeccd2f52b18f956be931cba63ee
                     </div>
                     </div>
                 </div>
@@ -140,15 +172,22 @@ header("Refresh: 5; URL=$url1");
                 Price
               </th>
               <th scope="col" class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">
+<<<<<<< HEAD
+=======
                 Track
               </th>
               <th scope="col" class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">
+>>>>>>> e665a55d2383eeccd2f52b18f956be931cba63ee
                 Status
               </th> 
 
             </tr>
           </thead>
+<<<<<<< HEAD
+          <tbody class="divide-y divide-gray-200">
+=======
           <tbody class="bg-white divide-y divide-gray-200">
+>>>>>>> e665a55d2383eeccd2f52b18f956be931cba63ee
           <?php
               $order = array();
               while ($order = $data->fetch_assoc())
@@ -186,9 +225,12 @@ header("Refresh: 5; URL=$url1");
               <td class="px-6 py-4 whitespace-nowrap font-semibold text-sm text-price">
                 <?php echo $order['price']; ?>
               </td>
+<<<<<<< HEAD
+=======
               <td class="px-6 py-4 whitespace-nowrap font-semibold text-sm text-gray-200">
                 <?php echo $order['track']; ?>
               </td>
+>>>>>>> e665a55d2383eeccd2f52b18f956be931cba63ee
               <td class="px-6 py-4 whitespace-nowrap">
                 <?php 
                 if($order['status'] === "Accepted"){

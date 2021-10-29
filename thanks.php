@@ -31,16 +31,30 @@ if(!isset($_POST['submit'])) {
     echo $option;
     echo "<br>";
     if($option == "FTID 2"){
+<<<<<<< HEAD
+        $amount = '18$';
+    }
+    elseif($option == "Label Drop"){
+        $amount = '10$';
+=======
         $amount = '15$';
+>>>>>>> e665a55d2383eeccd2f52b18f956be931cba63ee
     }
     elseif($option == "FTID 3"){
         $amount = '25$';
     }
     elseif($option == "LIT"){
+<<<<<<< HEAD
+        $amount = '35$';
+    }
+    else{
+        $amount = '45$';
+=======
         $amount = '30$';
     }
     else{
         $amount = '50$';
+>>>>>>> e665a55d2383eeccd2f52b18f956be931cba63ee
     }
     echo $amount;
     echo "<br>";
@@ -50,15 +64,28 @@ if(!isset($_POST['submit'])) {
     $weight = $_POST['weight'];
     echo $weight;
     echo "<br>";
+<<<<<<< HEAD
+=======
     $tracking = $_POST['tracking'];
     echo $tracking;
     echo "<br>";
+>>>>>>> e665a55d2383eeccd2f52b18f956be931cba63ee
     $status = 'Processing';
     echo $status;
     echo "<br>";
     $date = date("m-d-y g:i");
     echo $date;
     echo "<br>";
+<<<<<<< HEAD
+    $target_dir = "uploads";
+    $file_name = $_FILES['file']['name'];
+    echo $file_name;
+    $file_tmp = $_FILES['file']['tmp_name'];
+    echo $file_tmp;
+    
+    if (move_uploaded_file($file_tmp, $target_dir . $file_name)) {
+        $upload = "INSERT INTO `orders` (`user`, `country`, `option`, `courier`, `weight`, `price`, `track`, `status`, `file`, `added`) VALUES ('$user', '$country', '$option', '$courier', '$weight', '$amount', '$tracking', '$status', '$file_name', '$date')";
+=======
     $file = $_FILES['file']['name'];
     $target = "uploads/".basename($file);
     $file_tmp =$_FILES['file']['tmp_name'];
@@ -67,18 +94,28 @@ if(!isset($_POST['submit'])) {
     echo "<br>";
     if(move_uploaded_file($file_tmp , $target)){
         $upload = "INSERT INTO `orders` (`user`, `country`, `option`, `courier`, `weight`, `price`, `track`, `status`, `file`, `added`) VALUES ('$user', '$country', '$option', '$courier', '$weight', '$amount', '$tracking', '$status', '$file', '$date')";
+>>>>>>> e665a55d2383eeccd2f52b18f956be931cba63ee
         if ($db->query($upload) === TRUE) {
             header('location: index.php');
         } else {
             echo "Error: " . $upload . "<br>" . $db->error;
         }
     }
+<<<<<<< HEAD
+    else {
+        echo "<h1>File Upload not successfull</h1>";
+    }
+=======
+>>>>>>> e665a55d2383eeccd2f52b18f956be931cba63ee
 }
 else{
     header('location: boxing.php');
 }
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> e665a55d2383eeccd2f52b18f956be931cba63ee
 ?>
 <div class="middle">
 

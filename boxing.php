@@ -62,12 +62,37 @@ $today = date("j M Y, l");
                     Step 2: <span class="text-gray-700 head">Select Option</span>
                     <br>
                     <label class="items-center">
+<<<<<<< HEAD
+                        <input type="radio" class="form-radio" name="option" value="Label Drop">
+                        <span class="ml-2">Label Drop <span style="margin-left: 5.7rem;" class="px-2 inline-flex text-base leading-5 font-semibold rounded-full bg-purple text-white">10$</span></span>
+                    </label>
+                    <br>
+                    <label class="items-center">
+                        <input type="radio" class="form-radio" name="option" value="FTID 2">
+                        <span class="ml-2">FTID 2 <span style="margin-left: 7.5rem;" class="px-2 inline-flex text-base leading-5 font-semibold rounded-full bg-purple text-white">20$</span></span>
+=======
                         <input type="radio" class="form-radio" name="option" value="FTID 2">
                         <span class="ml-2">FTID 2 <span style="margin-left: 7.5rem;" class="px-2 inline-flex text-base leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800">15$</span></span>
+>>>>>>> e665a55d2383eeccd2f52b18f956be931cba63ee
                     </label>
                     <br>
                     <label class="items-center">
                         <input type="radio" class="form-radio" name="option" value="FTID 3">
+<<<<<<< HEAD
+                        <span class="ml-2">FTID 3 <span style="margin-left: 7.5rem;" class="px-2 inline-flex text-base leading-5 font-semibold rounded-full bg-purple text-white">25$</span></span>
+                    </label>
+                    <br>
+                    <label class="items-center">
+                        <input type="radio" class="form-radio" name="option" value="FTID 5">
+                        <span class="ml-2">FTID 5 - Express Labels <span class="px-2 inline-flex text-base leading-5 font-semibold rounded-full bg-purple text-white">45$</span></span>
+                    </label>
+                    <br>
+                    <label class="items-center">
+                        <input type="radio" class="form-radio" name="option" value="LIT">
+                        <span class="ml-2">LIT<span style="margin-left: 9.3rem;" class="px-2 inline-flex text-base leading-5 font-semibold rounded-full bg-purple text-white">50$</span></span>
+                    </label>
+                   
+=======
                         <span class="ml-2">FTID 3 <span style="margin-left: 7.5rem;" class="px-2 inline-flex text-base leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800">25$</span></span>
                     </label>
                     <br>
@@ -80,6 +105,7 @@ $today = date("j M Y, l");
                         <input type="radio" class="form-radio" name="option" value="FTID 5">
                         <span class="ml-2">FTID 5 - Express Labels <span class="px-2 inline-flex text-base leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800">50$</span></span>
                     </label>
+>>>>>>> e665a55d2383eeccd2f52b18f956be931cba63ee
                 </div>
                 <div class="step">
                     Step 3: <span class="text-gray-700 head">Enter Weight</span>
@@ -100,10 +126,13 @@ $today = date("j M Y, l");
                 </div>
                 <br>
                 <div class="step">
+<<<<<<< HEAD
+=======
                     Step 5: <span class="text-gray-700 head">Enter Tracking Number</span>
                     <input type="text" name="tracking" required="" placeholder="XXXXXXXXXXXXX"class="mt-1 focus:ring-yellow-500 focus:border-yellow-500 text-black block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
                 </div>
                 <div class="step">
+>>>>>>> e665a55d2383eeccd2f52b18f956be931cba63ee
                     Step 6: <span class="text-gray-700 head">Upload Label</span>
                     <br>
                     <label>

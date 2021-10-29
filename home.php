@@ -40,7 +40,11 @@ function getUserIP()
 $user_ip = getUserIP();
 if ($_GET['logout']) {
   setcookie('tg_user', '');
+<<<<<<< HEAD
+  header('Location: index.php');
+=======
   header('Location: login_example.php');
+>>>>>>> e665a55d2383eeccd2f52b18f956be931cba63ee
 }
 
 $tg_user = getTelegramUserData();
@@ -94,6 +98,16 @@ if ($tg_user !== false) {
         
         body {
             margin: 0px;
+<<<<<<< HEAD
+            background: #000000;
+            color: #fff;
+        }
+        img{
+          width: 70%
+;
+    display: block;
+    margin: 0 auto;
+=======
             background: #101010;
             color: #fff;
         }
@@ -122,11 +136,15 @@ if ($tg_user !== false) {
             text-align: center;
             
             user-select: none;
+>>>>>>> e665a55d2383eeccd2f52b18f956be931cba63ee
         }
         #telegram-login-loginphp_bot{
           display: block;
           margin: 0 auto;
         }
+<<<<<<< HEAD
+
+=======
         #text1, #text2 {
 	font-family: 'Playfair Display', serif;
 	text-transform: uppercase;	
@@ -154,6 +172,7 @@ h1 {
     font-family: 'Raleway', sans-serif;
     text-shadow: -4px -4px 0px #d8a316;
 }
+>>>>>>> e665a55d2383eeccd2f52b18f956be931cba63ee
         </style>
 </head>
 <body>
@@ -161,6 +180,13 @@ h1 {
 
 <!-- The two texts -->
 <div id="container">
+<<<<<<< HEAD
+  <img src="https://cdn.discordapp.com/attachments/884816091803680858/903043808156069898/Website.gif">
+<script async src="https://telegram.org/js/telegram-widget.js?2" data-telegram-login="loginphp_bot" data-size="large" data-auth-url="check_authorization.php"></script>
+
+</div>
+
+=======
 	<span id="text1"></span>
 	<span id="text2"></span>
 </div>
@@ -184,6 +210,7 @@ h1 {
   </div>
 <script async src="https://telegram.org/js/telegram-widget.js?2" data-telegram-login="loginphp_bot" data-size="large" data-auth-url="check_authorization.php"></script>
 
+>>>>>>> e665a55d2383eeccd2f52b18f956be931cba63ee
 <!-- Load Babel -->
 <!-- v6 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> -->
 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -200,7 +227,11 @@ const elts = {
 
 // The strings to morph between. You can change these to anything you want!
 const texts = [
+<<<<<<< HEAD
+	"FTID.ART",
+=======
 	"HERMES FTID",
+>>>>>>> e665a55d2383eeccd2f52b18f956be931cba63ee
 
 ];
 
