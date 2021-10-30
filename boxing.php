@@ -53,10 +53,14 @@ $today = date("j M Y, l");
             <form name="order" action="thanks.php" method="post" class="order-form" enctype="multipart/form-data">
                 <div class="step">
                     Step 1: <span class="text-gray-700 head">Select Country</span>
-                    <input type="radio" name="usa" value="usa" class="card-radio-input" >
-                    <button type="button" class="card-radio focus:outline-none text-yellow-600 text-sm py-2.5 px-5 rounded-md border border-yellow-600 hover:bg-yellow-50 flex items-center">
-                        United States
-                    </button>
+                    <br>
+                    <label class="flex">
+                    <div class="country-box">
+                        <input type="radio" name="country" value="USA" class="" > USA
+                    </div>
+                    <div class="country-box">
+                        <input type="radio" name="country" value="Canada" class="" > Canada
+                    </div>
                 </div>
                 <div class="step">
                     Step 2: <span class="text-gray-700 head">Select Option</span>

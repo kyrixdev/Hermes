@@ -87,7 +87,7 @@ $data = mysqli_query($db, $order_sql);
 
             </tr>
           </thead>
-          <tbody class="bg-white divide-y divide-gray-200">
+          <tbody class="divide-y divide-gray-200">
           <?php
               $order = array();
               while ($order = $data->fetch_assoc())

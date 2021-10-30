@@ -108,9 +108,13 @@ if($_GET["order"]){
         </li>
       </ul>
       <ul class="text-lg text-gray-300 font-light hidden md:flex mt-8">
-        <li class="font-bold mr-5">
+        <li class="font-bold">
             PRICE
             <span class="block text-base font-normal"><?php echo $price; ?></span>
+        </li>
+        <li class="font-bold mx-16">
+            COUNTRY
+            <span class="block text-base font-normal"><?php echo $country; ?></span>
         </li>
         <br>
         <li class="font-bold">
@@ -188,7 +192,7 @@ if($_GET["order"]){
     </div>
     <?php
         if($role = "Owner" || $role = "Admin" || $role = "Worker"){
-            echo '<a href="admin/" class="btn btn-admin"> <i class="bx bxs-lock-alt"></i> Staff Dashboard </a>';
+            echo '<a href="../admin/" class="btn btn-admin"> <i class="bx bxs-lock-alt"></i> Staff Dashboard </a>';
         }
     ?>
 </div>

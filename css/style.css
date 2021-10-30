@@ -843,7 +843,33 @@ td img{
     left: 0;
  }
 }
-
+@media (max-width: 1399px) {
+  nav.info li i {
+    color: #7236d9;
+    font-size: x-large;
+    vertical-align: bottom;
+    margin: 0;
+  }
+  nav.info li {
+    list-style: none;
+    font-size: initial;
+    font-weight: 500;
+    margin: 1rem 0;
+    color: #ffffff;
+  }
+  .item-link {
+    font-size: inherit;
+    font-weight: 600;
+    padding: 1rem;
+    color: #ffffff;
+  }
+  .item-link i {
+    color: #b05fde;
+    font-size: x-large;
+    margin: 0 1rem;
+    vertical-align: sub;
+  }
+}
 .btnn{
   background: #232323;
     padding: .5rem 2rem;
@@ -866,4 +892,11 @@ td img{
 .card-radio:hover{
   box-shadow: 0 0 50px #4b2464, inset 0 0 50px #45215c;
   background: transparent;
+}
+.country-box{
+margin: 0 2rem;
+border: 3px solid;
+padding: 1rem 1rem;
+border-radius: 0.5rem;
+box-shadow: 0 0 50px #4b2464, inset 0 0 50px #45215c;
 }

@@ -24,7 +24,7 @@ if(!isset($_POST['submit'])) {
     $user = $id;
     echo $user;
     echo "<br>";
-    $country = "usa";
+    $country = $_POST['country'];
     echo $country;
     echo "<br>";
     $option = $_POST['option'];
@@ -59,23 +59,19 @@ if(!isset($_POST['submit'])) {
     $date = date("m-d-y g:i");
     echo $date;
     echo "<br>";
-    $target_dir = "uploads";
+    $target_dir = "uploads/";
     $file_name = $_FILES['file']['name'];
     echo $file_name;
     $file_tmp = $_FILES['file']['tmp_name'];
     echo $file_tmp;
-    
-    if (move_uploaded_file($file_tmp, $target_dir . $file_name)) {
+    move_uploaded_file($file_tmp, $target_dir . $file_name);
         $upload = "INSERT INTO `orders` (`user`, `country`, `option`, `courier`, `weight`, `price`, `track`, `status`, `file`, `added`) VALUES ('$user', '$country', '$option', '$courier', '$weight', '$amount', '$tracking', '$status', '$file_name', '$date')";
         if ($db->query($upload) === TRUE) {
             header('location: index.php');
         } else {
             echo "Error: " . $upload . "<br>" . $db->error;
         }
-    }
-    else {
-        echo "<h1>File Upload not successfull</h1>";
-    }
+
 }
 else{
     header('location: boxing.php');
